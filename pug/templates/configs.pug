@@ -1,0 +1,15 @@
+-var image = './images/imagen.png'
+-var titles = ['Pug.ames', 'Main Title']
+-var items__titles = ['Subtitle 1', 'Subtitle 2','Subtitle 3']
+-var user = 'Nilson'
+-var links = ['About', 'News', 'Contact']
+
+//- mixins
+
+mixin caja(image,title,content) 
+	.caja 
+		.caja__imagen: img(src="./images/"+image, alt="Generic Image")
+		.caja__contenido 
+			h3= title 
+			p= content
+			a.boton Read
