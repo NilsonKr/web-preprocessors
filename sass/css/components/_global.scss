@@ -6,7 +6,8 @@ $lightColor: #FFFFFF;
 $variantyColor: #3f579a;
 
 @mixin box {
-  width: 60%;
+  
+  max-width: 60%;
 	margin: 25px auto;
 	border-radius: 30px;
   background-color: $lightColor;
