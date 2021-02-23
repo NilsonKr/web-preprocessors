@@ -1,0 +1,49 @@
+$mainFont: 'Lato', sans-serif;
+$secondFont: 'Oswald', sans-serif;
+$primaryColor: #333333;
+$secondaryColor: #8841DA;
+$lightColor: #FFFFFF;
+$variantyColor: #3f579a;
+
+@mixin box {
+  width: 60%;
+	margin: 25px auto;
+	border-radius: 30px;
+  background-color: $lightColor;
+  color: $primaryColor;
+  box-shadow: 0 18px 25px rgba(0,0,0,0.4);
+}
+
+@mixin fontFamily($font){
+  @if $font==$secondFont {
+    font-family: $secondFont;
+    text-transform: uppercase;
+  }
+}
+
+@function get-opacity($color,$opacity){
+  @return rgba($color,$opacity)
+}
+
+@each $header, $size in (h1: 2rem, h2: 1.6rem, h3: 1.3rem){
+  #{$header} {
+    font-size: $size;
+  }
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	font-family: 'Lato', sans-serif;
+	font-size: 62.5%;
+}
+
+main{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+}
